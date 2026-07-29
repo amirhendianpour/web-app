@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useRef, useState, useEffect, useCallback, ReactNode } from "react";
+import { createContext, useContext, useRef, useState, useEffect, useCallback, type ReactNode } from "react";
 import { getUsersInfo } from "../services/userService";
 import type { UserInfo } from "../types/UserInfo";
 

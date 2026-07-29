@@ -42,7 +42,6 @@ const App: React.FC = () => {
   
   const [chatList, setChatList] = useState<string[]>([]);
   const [activeChat, setActiveChatState] = useState<string | null>(null);
-  const [isCallActive, setIsCallActive] = useState<boolean>(false);
   
   const [groups, setGroups] = useState<GroupInfo[]>([]);
   const [activeGroup, setActiveGroup] = useState<GroupInfo | null>(null);
@@ -132,13 +131,6 @@ const App: React.FC = () => {
     const displayName = `${updated.firstName} ${updated.lastName}`.trim();
     setMyDisplayName(displayName);
     updateDisplayName(displayName);
-  };
-
-  const handleLoginSuccess = (newToken: string, username: string) => {
-    localStorage.setItem('chat_token', newToken);
-    localStorage.setItem('chat_username', username);
-    setToken(newToken);
-    setMyUsername(username);
   };
 
   const handleRefreshGroups = () => {
